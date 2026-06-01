@@ -204,9 +204,14 @@
         });
 
         console.log("Payment completed:", result.reference, result.amount);
+        window.location.href = "thanks.html";
       } catch (e) {
         console.error("Checkout error:", e.message);
-        alert("Payment initialization failed. Please refresh the page and try again.");
+        if (e.code === 'cancelled') {
+          window.location.href = "cancelled.html";
+        } else {
+          alert("Payment initialization failed. Please refresh the page and try again.");
+        }
       }
     });
   </script>
