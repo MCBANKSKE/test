@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learning Center - ArticleHub</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    header {
+      background: white;
+      padding: 20px 30px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #667eea;
+    }
+    nav {
+      margin-top: 15px;
+    }
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin-right: 25px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+    nav a:hover {
+      color: #667eea;
+    }
+    .hero {
+      background: white;
+      padding: 40px;
+      border-radius: 15px;
+      margin-bottom: 30px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    }
+    .hero h1 {
+      font-size: 36px;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    .hero p {
+      color: #666;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    .courses {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 25px;
+    }
+    .course-card {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .course-card:hover {
+      transform: translateY(-5px);
+    }
+    .course-card h3 {
+      font-size: 22px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    .course-card p {
+      color: #666;
+      line-height: 1.6;
+      margin-bottom: 15px;
+    }
+    .free-badge {
+      display: inline-block;
+      background: #28a745;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .premium-badge {
+      display: inline-block;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .read-btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .read-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+    }
+    .read-btn.free {
+      background: #28a745;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">📚 ArticleHub</div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="learning.html">Learning</a>
+      </nav>
+    </header>
+
+    <div class="hero">
+      <h1>Learning Center</h1>
+      <p>Explore our collection of free and premium articles to expand your knowledge.</p>
+    </div>
+
+    <div class="courses">
+      <div class="course-card">
+        <span class="free-badge">FREE</span>
+        <h3>Introduction to Web Development</h3>
+        <p>Learn the basics of HTML, CSS, and JavaScript to start building your own websites.</p>
+        <a href="#" class="read-btn free">Read Now</a>
+      </div>
+
+      <div class="course-card">
+        <span class="free-badge">FREE</span>
+        <h3>Digital Marketing Fundamentals</h3>
+        <p>Understand the core principles of digital marketing and how to grow your online presence.</p>
+        <a href="#" class="read-btn free">Read Now</a>
+      </div>
+
+      <div class="course-card">
+        <span class="premium-badge">PREMIUM</span>
+        <h3>Advanced Machine Learning</h3>
+        <p>Dive deep into neural networks, deep learning, and practical ML applications.</p>
+        <a href="index.html" class="read-btn">Unlock (KES 100)</a>
+      </div>
+
+      <div class="course-card">
+        <span class="free-badge">FREE</span>
+        <h3>Productivity Hacks for Remote Work</h3>
+        <p>Master the art of working from home with these proven productivity strategies.</p>
+        <a href="#" class="read-btn free">Read Now</a>
+      </div>
+
+      <div class="course-card">
+        <span class="premium-badge">PREMIUM</span>
+        <h3>Cryptocurrency Investment Guide</h3>
+        <p>A comprehensive guide to understanding and investing in cryptocurrencies safely.</p>
+        <a href="index.html" class="read-btn">Unlock (KES 100)</a>
+      </div>
+
+      <div class="course-card">
+        <span class="free-badge">FREE</span>
+        <h3>Sustainable Living 101</h3>
+        <p>Simple changes you can make to live a more eco-friendly lifestyle.</p>
+        <a href="#" class="read-btn free">Read Now</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
