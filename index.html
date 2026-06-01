@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>PayNexus Demo Checkout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body style="font-family: Arial; padding: 40px;">
+
+  <h2>PayNexus Hosted Checkout Demo</h2>
+  <p>Click the button below to pay <b>KES 100</b></p>
+
+  <button id="payBtn" style="padding:12px 20px; font-size:16px;">
+    Pay 100 KES
+  </button>
+
+  <script src="https://cdn.paynexus.co.ke/v1/paynexus.min.js"></script>
+
+  <script>
+    // Standalone hosted checkout — no API key, just your public account ID
+    const checkout = PayNexusHostedCheckout();
+
+    document.getElementById("payBtn").addEventListener("click", async () => {
+      try {
+        const result = await checkout.open({
+          accountId: "ACC_ZVTDYYYL",
+          amount: 100,
+          description: "Test payment of 100 KES",
+          returnUrl: "https://yoursite.com/thanks",
+          cancelUrl: "https://yoursite.com/cancelled"
+        });
+
+        console.log("Payment completed:", result.reference, result.amount);
+      } catch (e) {
+        console.error("Checkout error:", e.message);
+        
+      }
+    });
+  </script>
+
+</body>
+</html>
